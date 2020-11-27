@@ -1,0 +1,24 @@
+{
+  "name": "web-raytracing-three",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --output-public-path=/dist/ --hot --inline"
+  },
+  "author": "Levsha1337",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-loader": "^7.1.5",
+    "eslint": "^7.14.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "three": "^0.123.0"
+  }
+}
