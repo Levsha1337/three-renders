@@ -90,7 +90,7 @@ function crankshaftInit() {
         const x = Math.PI * (0.5 + i);
         const pos = Math.sin(x) * pistonSize;
         const part = new Mesh(
-            new BoxGeometry(1.5, 1, 4),
+            new BoxGeometry(1.5, 1, pistonSize * 2),
             new MeshPhongMaterial({color: 0x777777})
         );
         part.position.set(pos, 0, i * 2 + 2);
@@ -99,7 +99,10 @@ function crankshaftInit() {
         scene.add(part);
         crankshaftBoxes.push(part);
     }
-    
+}
+
+function pistonsInit() {
+
 }
 
 function crankshaftUpdate(time) {
@@ -124,8 +127,13 @@ function crankshaftUpdate(time) {
     });
 }
 
+function pistonsUpdate() {
+    
+}
+
 function init() {
     crankshaftInit();
+    pistonsInit();
 }
 
 init();
@@ -138,6 +146,7 @@ export function render(time) {
     requestAnimationFrame( render );
 
     crankshaftUpdate(time);
+    pistonsUpdate(time);
 
     controls.update();
 
